@@ -1,0 +1,39 @@
+@startuml Usecase
+'styles
+skinparam packageStyle rectangle
+left to right direction
+
+
+'actors
+Actor Customer as customer
+Actor Cook as cook
+
+
+'usecases
+
+
+rectangle "Food Ordering App"{
+usecase placeOrder
+usecase seeMenu
+usecase seeOrder
+usecase markOrderComplete
+usecase seeWaitTime
+
+    rectangle "<<Service>>\nCalculateWaitTime" as serviceWaitTime
+    rectangle "<<Service>>\nMakePayment" as servicePayment
+
+}
+
+'links
+customer--placeOrder
+customer--seeMenu
+customer--seeWaitTime
+customer--servicePayment
+
+seeWaitTime-->serviceWaitTime
+cook--seeOrder
+cook--markOrderComplete
+
+
+
+@enduml
