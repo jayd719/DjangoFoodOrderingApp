@@ -1,0 +1,67 @@
+@startuml comps
+!define RECTANGLE class
+
+skinparam componentStyle uml2
+skinparam linetype ortho
+
+package "Client Side" {
+    RECTANGLE Browser
+    RECTANGLE "Mobile App"
+}
+
+package "Hosted CDN" {
+    RECTANGLE CDN
+}
+
+package "Server Side" {
+    package "Application Server" {
+        package "Controller" {
+            RECTANGLE "Flask Controller"
+            RECTANGLE OrderController
+            RECTANGLE PaymentController
+            RECTANGLE UserController
+            RECTANGLE AdminController
+        }
+
+        package "Model" {
+            RECTANGLE Order
+            RECTANGLE OrderItem
+            RECTANGLE Customer
+            RECTANGLE Cook
+            RECTANGLE Admin
+            RECTANGLE Menu
+            RECTANGLE Payment
+        }
+
+        package "View" {
+            RECTANGLE CustomerView
+            RECTANGLE CookView
+            RECTANGLE AdminView
+        }
+    }
+
+
+}
+
+Browser --> CDN
+"Mobile App" --> CDN
+Browser --> "Flask Controller"
+"Mobile App" --> "Flask Controller"
+"Flask Controller" --> CustomerView
+"Flask Controller" --> CookView
+"Flask Controller" --> AdminView
+"Flask Controller" --> Order
+"Flask Controller" --> Customer
+"Flask Controller" --> Menu
+"Flask Controller" --> Payment
+Order --> "Relational DB"
+Customer --> "Relational DB"
+Menu --> "Relational DB"
+Payment --> "Relational DB"
+OrderController --> Order
+PaymentController --> Payment
+UserController --> Customer
+AdminController --> Admin
+AdminController --> Menu
+
+@enduml

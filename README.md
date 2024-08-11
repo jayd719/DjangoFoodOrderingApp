@@ -14,7 +14,7 @@ Submit bug reports and feature suggestions, or track changes in the
 [JIRA Ticket](https:/jashandeep.co.uk).
 
 <h2>Scope</h2>
-<p>This is the first iteration with zero to very low information avaliable for the software product. This documentention provides quick start guide to get to <a herf="flex">Usecase</a>. This functionality can futher to extended to implement futher iterations of the software to futher modify as per buiness model requirements<p>
+<p>This is the initial version of the software product, with minimal available information. This documentation provides a quick start guide to help you understand and implement the <a>usecase</a>. The functionality can be further extended in future iterations to meet specific business requirements.<p>
 
 
 
@@ -27,10 +27,17 @@ Submit bug reports and feature suggestions, or track changes in the
 - Class modules
 
 ## Conventions
-- Namimg:
+- Naming:
     - Python Modules: snake_case
     - JavaScritp Modules: CamelCase
     - HTML Modulues: snake_case
+- Template:
+    - APP/templates/
+- Static Files:
+    - APP/static/
+- Hashing Alogrithms Used:
+    - Password: SHA-256
+    - Secure Cookie: SHA-1
 
 - Folder Depth: Max Leves: 3
 
@@ -52,14 +59,17 @@ Level Two Expantion:
 ## Class Diagrams
 ![plot](./out/DOCS/classDia/classDia.png)
 
+<img src="./out/DOCS/componetsTwo/comps.png">
+
 
 ##  Entity-Relationship Diagram (ERD)
 ![plot](./out/DOCS/databaseDesign/databaseDesign.png)
 
 ## Components
 <img src="./out/DOCS/topLevel.png" width =500><br>
-Componets at highest level
+<caption>Componets at highest level<c/aption>
 
+<img src ="">
 
 ## Files
 - Commands:
