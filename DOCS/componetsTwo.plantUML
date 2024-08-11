@@ -1,5 +1,6 @@
 @startuml comps
 left to right direction
+skinparam linetype ortho
 
 
 package "Client Side" {
@@ -43,17 +44,20 @@ package "Server Side" {
 
 }
 
-Browser --> CDN
-"Mobile App" --> CDN
-Browser --> "Flask Controller"
-"Mobile App" --> "Flask Controller"
-"Flask Controller" --> CustomerView
-"Flask Controller" --> CookView
-"Flask Controller" --> AdminView
-"Flask Controller" --> Order
-"Flask Controller" --> Customer
-"Flask Controller" --> Menu
-"Flask Controller" --> Payment
+Browser <-u- CDN
+"Mobile App" <-u- CDN
+
+Browser -[#blue]-> "Flask Controller"
+"Mobile App" -[#blue]-> "Flask Controller"
+
+"Flask Controller" -[#red]-> CustomerView
+"Flask Controller" -[#red]-> CookView
+"Flask Controller" -[#red]-> AdminView
+"Flask Controller" -[#red]-> Order
+"Flask Controller" -[#red]-> Menu
+"Flask Controller" -[#red]-> Customer
+"Flask Controller" -[#red]-> Payment
+
 Order --> "Relational DB"
 Customer --> "Relational DB"
 Menu --> "Relational DB"
