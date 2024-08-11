@@ -1,6 +1,6 @@
-# Software Requirements Specification
+<h1>Software Requirements Specification</h1>
 FOR
-# Food Ordering Web App
+<h1>Food Ordering Web App</h1>
 <br>
 
 
