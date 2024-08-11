@@ -1,6 +1,5 @@
 @startuml comps
 left to right direction
-!theme toy
 
 
 package "Client Side" {

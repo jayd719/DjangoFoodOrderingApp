@@ -59,7 +59,7 @@ Level Two Expantion:
 ## Class Diagrams
 ![plot](./out/DOCS/classDia/classDia.png)
 
-<img src="./out/DOCS/componetsTwo/comps.png">
+
 
 
 ##  Entity-Relationship Diagram (ERD)
@@ -69,7 +69,7 @@ Level Two Expantion:
 <img src="./out/DOCS/topLevel.png" width =500><br>
 <caption>Componets at highest level<c/aption>
 
-<img src ="">
+<img src="./out/DOCS/componetsTwo/comps.png">
 
 ## Files
 - Commands:

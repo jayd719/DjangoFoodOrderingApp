@@ -1,5 +1,5 @@
 @startuml topLevel
-!theme mars
+left to right direction
 
 package "Client Side" {
   [Browser]
