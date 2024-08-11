@@ -1,10 +1,7 @@
 @startuml comps
-!theme mars
 left to right direction
+!theme toy
 
-!define RECTANGLE class
-skinparam componentStyle uml2
-skinparam linetype ortho
 
 package "Client Side" {
     RECTANGLE Browser
@@ -21,6 +18,7 @@ package "Server Side" {
             RECTANGLE "Flask Controller"
             RECTANGLE OrderController
             RECTANGLE PaymentController
+            RECTANGLE CookController
             RECTANGLE UserController
             RECTANGLE AdminController
         }
@@ -42,6 +40,7 @@ package "Server Side" {
         }
     }
 
+    database "Relational DB"
 
 }
 
@@ -65,5 +64,7 @@ PaymentController --> Payment
 UserController --> Customer
 AdminController --> Admin
 AdminController --> Menu
+CookController-->Cook
+Order-l-> OrderItem
 
 @enduml
