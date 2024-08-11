@@ -1,5 +1,7 @@
 @startuml classDia
+left to right direction
 
+skinparam linetype ortho
 package "Food Ordering App" {
     package "Model" {
         class Order {
@@ -100,7 +102,8 @@ package "Food Ordering App" {
     }
 
     Model --> View
-    View --> Controller
-    Controller --> Model
+    View <-- Controller
+    Controller -r-> Model
+    Model-->Controller
 }
 @enduml
