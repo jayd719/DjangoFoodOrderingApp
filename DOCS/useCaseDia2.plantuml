@@ -1,4 +1,5 @@
 @startuml DesignUpdate2
+left to right direction 
 actor Customer
 actor Cook
 actor Admin
