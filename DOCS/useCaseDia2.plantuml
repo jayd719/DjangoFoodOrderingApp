@@ -1,0 +1,38 @@
+@startuml DesignUpdate2
+actor Customer
+actor Cook
+actor Admin
+
+rectangle "Food Ordering App" {
+    
+    Customer --> (register)
+    Customer --> (addItemsToCart)
+    Customer --> (seeMenu)
+    Customer --> (placeOrder) : <<includes>>
+    (placeOrder) --> (verifyEmail)
+    Customer --> (viewCart)
+    Customer --> (seeWaitTime) : <<extends>>
+    (seeWaitTime) --> (CalculateWaitTime) : <<Service>>
+    Customer --> (MakePayment) : <<Service>>
+    Customer --> (trackOrder)
+    Customer --> (viewOrderHistory)
+    Customer --> (provideFeedback)
+    Customer --> (resetPassword)
+    
+    Cook --> (login) : <<includes>>
+    (login) --> (verifyRegisteredEmail)
+    Cook --> (seeOrder)
+    Cook --> (markOrderComplete)
+
+    Admin --> (manageMenu)
+    Admin --> (manageUsers)
+    Admin --> (viewReports)
+    
+    (placeOrder) --> (sendOrderNotification)
+    (MakePayment) --> (verifyPayment) : <<includes>>
+    (MakePayment) --> (handlePaymentFailure) : <<includes>>
+    (register) --> (handleInvalidInput) : <<includes>>
+}
+
+@enduml
+©
