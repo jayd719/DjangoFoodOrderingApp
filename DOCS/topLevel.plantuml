@@ -1,4 +1,6 @@
 @startuml topLevel
+!theme mars
+
 package "Client Side" {
   [Browser]
   [Mobile App]

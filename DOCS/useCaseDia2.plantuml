@@ -1,4 +1,6 @@
 @startuml DesignUpdate2
+!theme mars
+
 left to right direction 
 actor Customer
 actor Cook

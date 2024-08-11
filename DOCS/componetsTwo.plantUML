@@ -1,6 +1,8 @@
 @startuml comps
-!define RECTANGLE class
+!theme mars
+left to right direction
 
+!define RECTANGLE class
 skinparam componentStyle uml2
 skinparam linetype ortho
 

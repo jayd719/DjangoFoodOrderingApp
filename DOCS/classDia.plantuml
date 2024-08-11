@@ -1,4 +1,5 @@
 @startuml classDia
+!theme mars
 package "Food Ordering App" {
     package "Model" {
         class Order {

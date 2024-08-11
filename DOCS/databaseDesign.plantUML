@@ -1,4 +1,6 @@
 @startuml databaseDesign
+!theme mars
+
 entity "Customers" as Customers {
     +int customerID
     --
