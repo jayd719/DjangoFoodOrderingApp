@@ -1,16 +1,22 @@
 from django.shortcuts import render,HttpResponse
+from T01Menu.models import MenuItem
+from T01Menu.models import Category
+from django.views import View
 
-WEBPAGE_TITLE = "someone"
 
-data = {
-    'TITLE':WEBPAGE_TITLE,
-}
 
 def homepage(request):
-    return render(request,"homepage.html",context=data)
+    return render(request,"homepage.html",context="data")
 
 
 
 
-def itemDetails(request,item_number):
-    return HttpResponse(f'ItemNumber is: {item_number}')
+class Menu(View):
+    template_name = "menu_page.html"    
+    def get(self,request):
+        data = {}
+        for category in Category.choices:
+            if category[0]!="U":
+                data.update({category[1]:MenuItem.objects.filter(category=category[0])})
+
+        return render(request,self.template_name,{"data":data})
