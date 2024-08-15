@@ -52,10 +52,6 @@ Top Level Design:
 <img src="./out/DOCS/useCaseDia/Usecase.png" width="400">
 
 
-Level Two Expantion:
-
-<img src="./out/DOCS/useCaseDia2/DesignUpdate2.png" width ="500">
-
 ## Class Diagrams
 ![plot](./out/DOCS/classDia/classDia.png)
 

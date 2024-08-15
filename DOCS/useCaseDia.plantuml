@@ -1,6 +1,5 @@
 @startuml Usecase
-!theme mars
-
+!theme toy
 
 'styles
 skinparam packageStyle rectangle
@@ -10,6 +9,8 @@ left to right direction
 'ACTORS
 Actor Customer as customer
 Actor Cook as cook
+Actor Admin as admin
+
 
 
 
@@ -25,6 +26,11 @@ rectangle "Food Ordering App"{
     usecase verifyEmail
     usecase verifyRegisteredEmail
     usecase login
+    usecase trackOrder
+
+    usecase manageUsers
+    usecase manageMenu
+    usecase viewReports
 
     ' SERVICES
     rectangle "<<Service>>\nCalculateWaitTime" as serviceWaitTime
@@ -39,6 +45,7 @@ customer--placeOrder
 customer--seeWaitTime
 customer--servicePayment
 customer--viewCart
+customer--trackOrder
 
 
 seeWaitTime-->serviceWaitTime:<<extends>>
@@ -49,6 +56,10 @@ cook--markOrderComplete
 
 login--|>verifyRegisteredEmail:<<includes>>
 placeOrder--|>verifyEmail:<<includes>>
+
+admin--manageMenu
+admin--manageUsers
+admin--viewReports
 
 
 
