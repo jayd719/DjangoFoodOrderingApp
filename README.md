@@ -17,8 +17,13 @@ Submit bug reports and feature suggestions, or track changes in the
 <p>This is the initial version of the software product, with minimal available information. This documentation provides a quick start guide to help you understand and implement the <a>usecase</a>. The functionality can be further extended in future iterations to meet specific business requirements.<p>
 
 
-
-
+## techs used
+- python 
+- javascript
+- html
+- tailwind
+- django
+- aws
 
 
 ## Table of contents

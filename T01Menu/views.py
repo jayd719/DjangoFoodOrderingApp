@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
+
 WEBPAGE_TITLE = "someone"
 
 data = {
@@ -7,4 +8,9 @@ data = {
 
 def homepage(request):
     return render(request,"homepage.html",context=data)
-# Create your views here.
+
+
+
+
+def itemDetails(request,item_number):
+    return HttpResponse(f'ItemNumber is: {item_number}')
