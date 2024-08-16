@@ -9,6 +9,8 @@ def homepage(request):
     return render(request,"homepage.html",context="data")
 
 
+def item_details(request,item_id):
+    return HttpResponse(item_id)
 
 
 class Menu(View):

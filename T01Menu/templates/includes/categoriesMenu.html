@@ -1,0 +1,10 @@
+{% load static%}
+<div id="menuContainer">
+  <ul>
+    {%for category in data%}
+    <li><img src="https://www.svgrepo.com/show/401376/curry-rice.svg" alt=""> {{category}}</li>
+    {%endfor%}
+  </ul>
+</div>
+
+<script src="{% static 'styleCatMenu.js'%}"></script>
