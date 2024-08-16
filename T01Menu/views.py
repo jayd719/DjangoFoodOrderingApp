@@ -2,8 +2,11 @@ from django.shortcuts import render,HttpResponse
 from T01Menu.models import MenuItem
 from T01Menu.models import Category
 from django.views import View
+from django.shortcuts import redirect
 
 
+def redirect_(request):
+    return redirect("/menu/")
 
 def homepage(request):
     return render(request,"homepage.html",context="data")

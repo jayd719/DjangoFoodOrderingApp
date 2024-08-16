@@ -16,13 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
-from django.shortcuts import redirect
-
+from T01Menu.views import redirect_
 
     
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",include("T01Menu.urls")),
+    path('',redirect_),
+    path('',include("T01Menu.urls")),
 ]
