@@ -3,7 +3,7 @@
  * @returns {string} - A string containing the HTML for a cart button with an icon.
  */
 function cartButton() {
-  return `<li class=""><label class=""  for="cart-drawer"><img class="w-6 invert" src="https://www.svgrepo.com/show/512843/shopping-bag-1143.svg"></label></li>`;
+  return `<li class=""><label onclick="cart.displayCart()" for="cart-drawer"><div id="cart_items_label" class="absolute top-0 right-0 bg-red-500 rounded-full px-2 text-[10px]"></div> <img class="w-6 invert" src="https://www.svgrepo.com/show/512843/shopping-bag-1143.svg"></label></li>`;
 }
 
 /**
@@ -91,27 +91,31 @@ IconHeader.innerHTML = `
   </div>
 </div>`;
 
-
 /**
  * creates and add side bar for cart items
- * 
+ *
  */
 
-let cartBar = document.createElement("div")
-document.body.appendChild(cartBar)
-cartBar.innerHTML=`
+let cartBar = document.createElement("div");
+document.body.appendChild(cartBar);
+cartBar.innerHTML = `
 <div class="drawer z-[500]">
   <input id="cart-drawer" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content">
     <!-- Page content here -->
   </div>
-  <div class="drawer-side">
+  <div class="drawer-side ">
     <label for="cart-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  </div>
+    <div class="bg-base-200 min-h-full">
+      <h2 class="text-4xl font-bold font-black font-title z-[100] p-3 mb-4 text-red-600">Shopping cart</h2>
+      <ul class="menu text-base-content  p-4 w-96 divide-y divide-gray-200" id="cart_list">
+      </ul>
+
+     
+
+    </div>  
+   </div>
 </div>
-`
+`;
+
+
