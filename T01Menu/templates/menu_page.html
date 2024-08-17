@@ -1,5 +1,12 @@
-{%extends 'homepage.html'%} {%load static%} {%block menu%} 
+{%extends 'homepage.html'%} 
+{%load static%} 
+{%block content%} 
+
+
 {% include 'includes/rightSideBar.html'%}
+{%include 'includes/categoriesMenu.html'%}
+
+
 {%for category,items in data.items%}
 <h1 class="category_heading">{{category}}</h1>
 

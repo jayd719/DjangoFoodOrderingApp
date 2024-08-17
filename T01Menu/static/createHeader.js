@@ -38,7 +38,7 @@ HEADER.appendChild(topRow);
 topRow.className = "bg-red-600 p-1";
 
 let offerText = document.createElement("h1");
-offerText.className = "text-sm md:text-md text-center text-white";
+offerText.className = "text-[12px] md:text-md text-center text-white";
 offerText.textContent = OFFERS_TEXT[1];
 topRow.appendChild(offerText);
 

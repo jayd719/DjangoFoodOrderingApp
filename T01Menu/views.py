@@ -15,6 +15,10 @@ def homepage(request):
 def item_details(request,item_id):
     return HttpResponse(item_id)
 
+def srs_doc(request):
+    return render(request,'docs/srs.html')
+def bp_plan(request):
+    return render(request,'docs/bp.html')
 
 class Menu(View):
     template_name = "menu_page.html"    

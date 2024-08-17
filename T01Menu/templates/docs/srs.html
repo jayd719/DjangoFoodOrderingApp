@@ -1,0 +1,52 @@
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+<div class="h-24"></div>
+{%include 'docs/menu.html'%}
+
+<div id="srs">
+  <h1>Software Requirements Specification</h1>
+  <hr />
+  <h3>FOR</h3>
+  <p><strong>Food Ordering Web App</strong></p>
+  <h2>Overview</h2>
+  <p>
+    This Software Requirements Specification (SRS) document outlines the
+    functional and non-functional requirements for the Food Ordering Web
+    App. The app is designed to provide a seamless experience for customers
+    to order food online, enable cooks to manage and fulfill orders
+    efficiently, and allow administrators to oversee and maintain the system
+    effectively.
+  </p>
+  <p>For the final product: project page.</p>
+  <p>
+    To report bugs, request features, or track ongoing developments, please
+    use the JIRA ticketing system.
+  </p>
+  <h2>Scope</h2>
+  <p>
+    This document represents the initial version of the software product,
+    providing essential information to guide the development and
+    implementation process. It serves as a quick start guide to
+    understanding the use case, with the potential for future iterations to
+    enhance and expand functionality based on evolving business needs.
+  </p>
+  <h2>Technologies Used</h2>
+  <ul>
+    <li><strong>Python</strong></li>
+    <li><strong>JavaScript</strong></li>
+    <li><strong>HTML</strong></li>
+    <li><strong>Tailwind CSS</strong></li>
+    <li><strong>Django</strong></li>
+    <li><strong>AWS</strong></li>
+  </ul>
+
+  <h2>Usecase Diagrams</h2>
+  <img src="/out/DOCS/useCaseDia/Usecase.png" alt="" />
+
+  <h2>Class Diagram</h2>
+  <img src="/out/DOCS/classDia/classDia.png" alt="" />
+</div>
+
+<script src="{%static 'srsDocumentFormat.js'%}" ></script>
+{%endblock%}
