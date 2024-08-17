@@ -2,17 +2,14 @@ let menuContainer = document.getElementById("menuContainer");
 
 const ELEMENT = 1;
 
-menuContainer.className = "flex bg-white p-2 rounded-lg shadow-xl border m-3";
+menuContainer.className = "flex justify-center";
 menuContainer.childNodes[ELEMENT].className =
-  "flex justifiy-center gap-3 mx-auto";
+  "grid justify-items-stretch grid-cols-3  lg:grid-cols-6 gap-1";
 
 menuContainer.childNodes[ELEMENT].childNodes.forEach((item) => {
   if (item.nodeName == "LI") {
-    item.className = "text-lg text-center flex rounded items-center p-1  hover:cursor-pointer";
-    item.childNodes[0].className = "w-12 mx-auto ";
+    item.className =
+      "flex border items-center justify-center px-10 h-36 text-xl flex-col";
+    item.childNodes[0].className = "w-20 mx-auto ";
   }
 });
-
-// window.setTimeout(function () {
-//   window.location.reload();
-// }, 3000);
