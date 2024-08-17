@@ -58,7 +58,8 @@ HEADER.appendChild(menuBar);
 menuBar.innerHTML = `
 <div class="bg-zinc-800 flex justify-end shadow-xl">
   <ul class="menu menu-horizontal text-white font-bold gap-3 items-center text-md">
-    <li class="hidden md:flex">Support<li>
+    <li class="hidden md:flex"><a href="/srs/">Call Restaurant</a><li>
+    <li class="hidden md:flex">Menu<li>
     <li class="hidden md:flex">Offers<li>
     ${cartButton()}
   <ul>

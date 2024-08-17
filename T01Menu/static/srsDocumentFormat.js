@@ -33,7 +33,7 @@ document.querySelectorAll("#srs").forEach((container) => {
     } else if (element.nodeName === "HR") {
       element.className = "mb-10 mt-4";
     } else if (element.nodeName === "IMG") {
-      element.className = "w-[400px]  rounded-lg shadow-xl border";
+      element.className = "w-[300px]  rounded-lg shadow-xl border ml-4 mb-5";
     }
     // console.log(element)
   });

@@ -1,6 +1,4 @@
-{%extends 'homepage.html'%}
-{%load static%}
-{%block content%}
+{%extends 'homepage.html'%} {%load static %} {%block content%}
 <div class="h-24"></div>
 {%include 'docs/menu.html'%}
 
@@ -12,24 +10,23 @@
   <h2>Overview</h2>
   <p>
     This Software Requirements Specification (SRS) document outlines the
-    functional and non-functional requirements for the Food Ordering Web
-    App. The app is designed to provide a seamless experience for customers
-    to order food online, enable cooks to manage and fulfill orders
-    efficiently, and allow administrators to oversee and maintain the system
-    effectively.
+    functional and non-functional requirements for the Food Ordering Web App.
+    The app is designed to provide a seamless experience for customers to order
+    food online, enable cooks to manage and fulfill orders efficiently, and
+    allow administrators to oversee and maintain the system effectively.
   </p>
   <p>For the final product: project page.</p>
   <p>
-    To report bugs, request features, or track ongoing developments, please
-    use the JIRA ticketing system.
+    To report bugs, request features, or track ongoing developments, please use
+    the JIRA ticketing system.
   </p>
   <h2>Scope</h2>
   <p>
     This document represents the initial version of the software product,
-    providing essential information to guide the development and
-    implementation process. It serves as a quick start guide to
-    understanding the use case, with the potential for future iterations to
-    enhance and expand functionality based on evolving business needs.
+    providing essential information to guide the development and implementation
+    process. It serves as a quick start guide to understanding the use case,
+    with the potential for future iterations to enhance and expand functionality
+    based on evolving business needs.
   </p>
   <h2>Technologies Used</h2>
   <ul>
@@ -42,11 +39,32 @@
   </ul>
 
   <h2>Usecase Diagrams</h2>
-  <img src="/out/DOCS/useCaseDia/Usecase.png" alt="" />
+  <img src="{%static 'DOCS/useCaseDia/Usecase.png'%}" alt="" />
 
   <h2>Class Diagram</h2>
-  <img src="/out/DOCS/classDia/classDia.png" alt="" />
-</div>
+  <img src="{%static 'DOCS/classDia/classDia.png'%}" alt="" />
 
-<script src="{%static 'srsDocumentFormat.js'%}" ></script>
+  <h2>Entity-Relationship Diagram (ERD)</h2>
+  <img src="{%static 'DOCS/databaseDesign/databaseDesign.png'%}" alt="" />
+
+  <h2>Components</h2>
+
+  Componets at highest level
+  <img src="{%static 'DOCS/topLevel.png'%}" alt="" />
+  <img src="{%static 'DOCS/componetsTwo/comps.png'%}" alt="" />
+
+
+  <h2> Maintainers</h2>
+  <strong>JD :</strong> <a href="https://jashandeep.co.uk" class="link">jashandeep.co.uk</a>
+  <br />
+  <sup>under educational interest</sup>
+
+<h2>Revisions</h2>
+  <ul>
+    <li><strong>10/12/24: </strong>Intial Draft</li>
+  </ul>
+  
+
+  <script src="{%static 'srsDocumentFormat.js'%}"></script>
+</div>
 {%endblock%}
