@@ -3,68 +3,293 @@
 {%include 'docs/menu.html'%}
 
 <div id="srs">
-  <h1>Software Requirements Specification</h1>
+  <h1>Software Requirements Specification (SRS)</h1>
+
+  <h3>for</h3>
+  <h1>Skip The Line</h1>
+  <div class="h-48"></div>
   <hr />
-  <h3>FOR</h3>
-  <p><strong>Food Ordering Web App</strong></p>
-  <h2>Overview</h2>
+  <h2>1. <strong>Introduction</strong></h2>
+  <h3>1.1 <strong>Purpose</strong></h3>
   <p>
-    This Software Requirements Specification (SRS) document outlines the
-    functional and non-functional requirements for the Food Ordering Web App.
-    The app is designed to provide a seamless experience for customers to order
-    food online, enable cooks to manage and fulfill orders efficiently, and
-    allow administrators to oversee and maintain the system effectively.
+    This document provides a detailed Software Requirements Specification (SRS)
+    for the <strong>Skip The Line</strong> platform, which is designed to
+    provide online order-taking services to restaurants and catering companies
+    at high-footfall live events such as fairs, stadiums, and other large
+    venues. The purpose of this document is to define the functionalities,
+    performance, design constraints, and external interfaces required for the
+    development and deployment of the platform.
   </p>
-  <p>For the final product: project page.</p>
+  <h3>1.2 <strong>Scope</strong></h3>
   <p>
-    To report bugs, request features, or track ongoing developments, please use
-    the JIRA ticketing system.
+    The <strong>Convince Matters</strong> platform will enable event attendees
+    to order food and beverages directly from their seats via a mobile
+    application. Vendors will receive and manage these orders through a
+    dedicated backend system. The platform will be used by event venues, food
+    vendors, and event attendees to streamline the food ordering process during
+    events. The scope of this SRS includes functional requirements,
+    non-functional requirements, and design constraints.
   </p>
-  <h2>Scope</h2>
-  <p>
-    This document represents the initial version of the software product,
-    providing essential information to guide the development and implementation
-    process. It serves as a quick start guide to understanding the use case,
-    with the potential for future iterations to enhance and expand functionality
-    based on evolving business needs.
-  </p>
-  <h2>Technologies Used</h2>
+  <h3>1.3 <strong>Definitions, Acronyms, and Abbreviations</strong></h3>
   <ul>
-    <li><strong>Python</strong></li>
-    <li><strong>JavaScript</strong></li>
-    <li><strong>HTML</strong></li>
-    <li><strong>Tailwind CSS</strong></li>
-    <li><strong>Django</strong></li>
-    <li><strong>AWS</strong></li>
+    <li>
+      <strong>App:</strong> Mobile application used by event attendees to place
+      orders.
+    </li>
+    <li>
+      <strong>Vendor:</strong> Restaurants or catering companies providing food
+      services at events.
+    </li>
+    <li>
+      <strong>Event Venue:</strong> Stadiums, fairgrounds, or other locations
+      where the app will be used.
+    </li>
+    <li><strong>SRS:</strong> Software Requirements Specification.</li>
+    <li>
+      <strong>POS:</strong> Point of Sale system used by vendors for
+      transactions.
+    </li>
   </ul>
-
-  <h2>Usecase Diagrams</h2>
-  <img src="{%static 'DOCS/useCaseDia/Usecase.png'%}" alt="" />
-
-  <h2>Class Diagram</h2>
-  <img src="{%static 'DOCS/classDia/classDia.png'%}" alt="" />
-
-  <h2>Entity-Relationship Diagram (ERD)</h2>
-  <img src="{%static 'DOCS/databaseDesign/databaseDesign.png'%}" alt="" />
-
-  <h2>Components</h2>
-
-  Componets at highest level
-  <img src="{%static 'DOCS/topLevel.png'%}" alt="" />
-  <img src="{%static 'DOCS/componetsTwo/comps.png'%}" alt="" />
-
-
-  <h2> Maintainers</h2>
-  <strong>JD :</strong> <a href="https://jashandeep.co.uk" class="link">jashandeep.co.uk</a>
-  <br />
-  <sup>under educational interest</sup>
-
-<h2>Revisions</h2>
+  <h3>1.4 <strong>References</strong></h3>
   <ul>
-    <li><strong>10/12/24: </strong>Intial Draft</li>
+    <li>
+      IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements
+      Specifications.
+    </li>
+    <li>Event Venue Management Systems Documentation.</li>
+    <li>Industry reports on food and beverage services at live events.</li>
   </ul>
-  
-
-  <script src="{%static 'srsDocumentFormat.js'%}"></script>
+  <h3>1.5 <strong>Overview</strong></h3>
+  <p>This SRS is structured as follows:</p>
+  <ul>
+    <li>
+      Section 2: Overall Description of the system, including user needs and
+      system constraints.
+    </li>
+    <li>
+      Section 3: Specific Requirements, detailing the functional and
+      non-functional requirements.
+    </li>
+    <li>
+      Section 4: System Features, describing individual features of the system.
+    </li>
+  </ul>
+  <hr />
+  <h2>2. <strong>Overall Description</strong></h2>
+  <h3>2.1 <strong>Product Perspective</strong></h3>
+  <p>
+    <strong>Convince Matters</strong> is a new application that integrates with
+    existing venue systems and vendor POS systems to offer a seamless food
+    ordering experience at live events. It is a standalone product but requires
+    integration with vendor and venue systems for full functionality.
+  </p>
+  <h3>2.2 <strong>Product Functions</strong></h3>
+  <ul>
+    <li>
+      <strong>User Interface:</strong> The app allows event attendees to browse
+      menus, place orders, and track deliveries.
+    </li>
+    <li>
+      <strong>Order Management:</strong> Vendors receive orders through a
+      backend interface, manage order status, and track inventory.
+    </li>
+    <li>
+      <strong>Delivery System:</strong> The platform includes a feature for
+      managing the delivery of orders within the event venue, including seat
+      identification and route optimization.
+    </li>
+  </ul>
+  <h3>2.3 <strong>User Characteristics</strong></h3>
+  <ul>
+    <li>
+      <strong>Event Attendees:</strong> Users who will interact with the app to
+      place orders.
+    </li>
+    <li>
+      <strong>Vendors:</strong> Users who will interact with the backend system
+      to manage orders and inventory.
+    </li>
+    <li>
+      <strong>Event Staff:</strong> Users responsible for delivering orders
+      within the venue.
+    </li>
+  </ul>
+  <h3>2.4 <strong>Constraints</strong></h3>
+  <ul>
+    <li>The system must handle high traffic during peak event times.</li>
+    <li>Integration with existing POS systems used by vendors.</li>
+    <li>Compliance with data privacy and security regulations.</li>
+  </ul>
+  <h3>2.5 <strong>Assumptions and Dependencies</strong></h3>
+  <ul>
+    <li>
+      The event venues will provide the necessary infrastructure for seat
+      identification and internet access.
+    </li>
+    <li>
+      Vendors will have compatible POS systems or be willing to integrate with
+      the Convince Matters platform.
+    </li>
+  </ul>
+  <hr />
+  <h2>3. <strong>Specific Requirements</strong></h2>
+  <h3>3.1 <strong>Functional Requirements</strong></h3>
+  <h4>3.1.1 <strong>User Interface</strong></h4>
+  <ul>
+    <li>
+      <strong>FR-1:</strong> The app shall display a list of available vendors
+      and their menus based on the event venue.
+    </li>
+    <li>
+      <strong>FR-2:</strong> The app shall allow users to select items, place
+      orders, and make payments through the app.
+    </li>
+    <li>
+      <strong>FR-3:</strong> The app shall provide real-time updates on the
+      status of the order.
+    </li>
+  </ul>
+  <h4>3.1.2 <strong>Order Management</strong></h4>
+  <ul>
+    <li>
+      <strong>FR-4:</strong> The backend system shall receive and display new
+      orders to vendors in real-time.
+    </li>
+    <li>
+      <strong>FR-5:</strong> The system shall allow vendors to update the status
+      of each order (e.g., preparing, ready, delivered).
+    </li>
+    <li>
+      <strong>FR-6:</strong> The system shall generate reports on sales and
+      inventory levels.
+    </li>
+  </ul>
+  <h4>3.1.3 <strong>Delivery Management</strong></h4>
+  <ul>
+    <li>
+      <strong>FR-7:</strong> The system shall identify the seat location of each
+      order based on the event venue's seating plan.
+    </li>
+    <li>
+      <strong>FR-8:</strong> The system shall optimize delivery routes for staff
+      to minimize delivery times.
+    </li>
+  </ul>
+  <h3>3.2 <strong>Non-Functional Requirements</strong></h3>
+  <h4>3.2.1 <strong>Performance Requirements</strong></h4>
+  <ul>
+    <li>
+      <strong>NFR-1:</strong> The system shall support up to 5,000 concurrent
+      users during peak event times.
+    </li>
+    <li>
+      <strong>NFR-2:</strong> The app shall load within 2 seconds under normal
+      operating conditions.
+    </li>
+  </ul>
+  <h4>3.2.2 <strong>Security Requirements</strong></h4>
+  <ul>
+    <li>
+      <strong>NFR-3:</strong> All transactions shall be encrypted using
+      industry-standard encryption methods.
+    </li>
+    <li>
+      <strong>NFR-4:</strong> The system shall comply with GDPR for data
+      privacy.
+    </li>
+  </ul>
+  <h4>3.2.3 <strong>Usability Requirements</strong></h4>
+  <ul>
+    <li>
+      <strong>NFR-5:</strong> The app interface shall be intuitive and easy to
+      navigate, requiring no more than 3 taps to place an order.
+    </li>
+    <li>
+      <strong>NFR-6:</strong> The system shall include accessibility features
+      for users with disabilities.
+    </li>
+  </ul>
+  <h3>3.3 <strong>Design Constraints</strong></h3>
+  <ul>
+    <li>The platform must be compatible with both Android and iOS devices.</li>
+    <li>
+      The system should be scalable to accommodate multiple venues and events
+      simultaneously.
+    </li>
+  </ul>
+  <hr />
+  <h2>4. <strong>System Features</strong></h2>
+  <h3>4.1 <strong>Menu Display</strong></h3>
+  <ul>
+    <li>
+      <strong>Description:</strong> Allows users to browse vendor menus and view
+      prices.
+    </li>
+    <li><strong>Priority:</strong> High</li>
+    <li>
+      <strong>Inputs:</strong> User location within the venue, event-specific
+      menus.
+    </li>
+    <li>
+      <strong>Outputs:</strong> Display of available items, prices, and
+      descriptions.
+    </li>
+  </ul>
+  <h3>4.2 <strong>Order Placement</strong></h3>
+  <ul>
+    <li>
+      <strong>Description:</strong> Enables users to place an order and make a
+      payment.
+    </li>
+    <li><strong>Priority:</strong> High</li>
+    <li><strong>Inputs:</strong> Selected items, payment details.</li>
+    <li>
+      <strong>Outputs:</strong> Confirmation of order and payment receipt.
+    </li>
+  </ul>
+  <h3>4.3 <strong>Order Tracking</strong></h3>
+  <ul>
+    <li>
+      <strong>Description:</strong> Provides real-time updates on the status of
+      the order.
+    </li>
+    <li><strong>Priority:</strong> Medium</li>
+    <li><strong>Inputs:</strong> Order status from vendor backend.</li>
+    <li>
+      <strong>Outputs:</strong> Real-time status updates to the user’s app.
+    </li>
+  </ul>
+  <h3>4.4 <strong>Vendor Management Interface</strong></h3>
+  <ul>
+    <li>
+      <strong>Description:</strong> Allows vendors to manage orders and track
+      inventory.
+    </li>
+    <li><strong>Priority:</strong> High</li>
+    <li><strong>Inputs:</strong> Orders received, inventory levels.</li>
+    <li><strong>Outputs:</strong> Updated order status, inventory reports.</li>
+  </ul>
+  <h3>4.5 <strong>Delivery System</strong></h3>
+  <ul>
+    <li>
+      <strong>Description:</strong> Manages the delivery of orders within the
+      event venue.
+    </li>
+    <li><strong>Priority:</strong> Medium</li>
+    <li><strong>Inputs:</strong> Seat location, order details.</li>
+    <li>
+      <strong>Outputs:</strong> Optimized delivery routes, delivery
+      confirmation.
+    </li>
+  </ul>
+  <hr />
+  <p>
+    This SRS provides a comprehensive guide for the development of the
+    <strong>Convince Matters</strong> platform, ensuring all aspects of
+    functionality, performance, and design constraints are addressed according
+    to IEEE Std 830-1998.
+  </p>
 </div>
+
+<script src="{%static 'srsDocumentFormat.js'%}"></script>
 {%endblock%}

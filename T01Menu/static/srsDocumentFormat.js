@@ -23,15 +23,15 @@ document.querySelectorAll("#srs").forEach((container) => {
     if (element.nodeName === "H1") {
       element.className = "text-7xl mt-10 mb-4 font-bold";
     } else if (element.nodeName === "H2") {
-      element.className = "text-xl mt-10 mb-0 font-bold";
+      element.className = "text-2xl mt-10 mb-0 font-bold mb-2";
     } else if (element.nodeName === "H3") {
-      element.className = "text-md";
+      element.className = "text-lg mt-5";
     } else if (element.nodeName === "P") {
-      element.className = "mx-auto text-justify mb-2 text-sm";
+      element.className = "mx-auto text-justify mb-2 text-md";
     } else if (element.nodeName === "UL") {
       element.className = "ml-8";
     } else if (element.nodeName === "HR") {
-      element.className = "mb-10 mt-4";
+      element.className = "mb-10 mt-6";
     } else if (element.nodeName === "IMG") {
       element.className = "w-[300px]  rounded-lg shadow-xl border ml-4 mb-5";
     }
