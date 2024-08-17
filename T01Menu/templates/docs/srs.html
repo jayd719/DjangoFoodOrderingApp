@@ -1,6 +1,8 @@
 {%extends 'homepage.html'%} {%load static %} {%block content%}
 <div class="h-24"></div>
 {%include 'docs/menu.html'%}
+<span class="hidden" id="activeTab">sr</span>
+<script src="{%static 'updateUnderlineOnDocumentMenu.js'%}"></script>
 
 <div id="srs">
   <h1>Software Requirements Specification (SRS)</h1>

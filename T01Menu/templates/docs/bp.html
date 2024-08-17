@@ -2,6 +2,10 @@
 
 <div class="h-24"></div>
 {%include 'docs/menu.html'%}
+
+<span class="hidden" id="activeTab">bp</span>
+<script src="{%static 'updateUnderlineOnDocumentMenu.js'%}"></script>
+
 <div id="srs">
   <h1>Business Plan</h1>
   <h3>For</h3>
@@ -325,6 +329,5 @@
     the event services and food technology industry.
   </p>
 </div>
-
 <script src="{%static 'srsDocumentFormat.js'%}"></script>
 {%endblock%}
