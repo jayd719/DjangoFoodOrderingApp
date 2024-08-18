@@ -72,6 +72,7 @@ Top Level Design:
 <caption>Componets at highest level<c/aption>
 
 <img src="./out/DOCS/componetsTwo/comps.png">
+<img src ="./out/DOCS/system Architecture/SystemArch.png">
 
 ## Files
 - Commands:
