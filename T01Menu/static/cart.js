@@ -10,7 +10,7 @@ function bottomCheckout(Subtotal) {
   </p>
   <div class="mt-6">
     <a
-      href="#"
+      href="/checkout/"
       class="flex items-center justify-center rounded-md border border-transparent bg-red-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-red-300 hover:text-black"
       >Checkout</a
     >
