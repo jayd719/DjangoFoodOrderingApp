@@ -1,0 +1,128 @@
+@startuml tr3
+left to right direction
+skinparam rectangle {
+  BackgroundColor White
+  BorderColor Black
+  Shadowing false
+}
+
+' Users
+actor User as U
+
+' Load Balancer and CDN
+rectangle "Global Infrastructure" {
+    node "Load Balancer" as LB
+    node "Content Delivery Network (CDN)" as CDN
+}
+
+' Frontend Layer
+rectangle "Frontend Layer" {
+    rectangle "Web Server" as WebServer {
+        node "Static Content Server" as StaticServer
+        node "Session Management" as SessionMgmt
+    }
+
+    rectangle "API Server" as APIServer {
+        node "User Management API" as UserAPI
+        node "Content Management API" as ContentAPI
+        node "Notification API" as NotificationAPI
+        node "Search API" as SearchAPI
+    }
+}
+
+' Backend Layer
+rectangle "Backend Layer" {
+    rectangle "Video Processing Pipeline" as VPP {
+        node "Upload Service" as UploadService
+        node "Transcoding Service" as Transcoder
+        node "Thumbnail Service" as Thumbnail
+        node "Metadata Extraction Service" as MetadataService
+    }
+
+    rectangle "Database Cluster" as DB {
+        node "User Database" as UserDB
+        node "Video Metadata Database" as VideoDB
+        node "Comments Database" as CommentsDB
+    }
+
+    rectangle "Recommendation Engine" as RE {
+        node "Personalization Service" as PersonalizationService
+        node "Trending Analysis Service" as TrendingService
+        node "Collaborative Filtering" as CollabFiltering
+    }
+
+    rectangle "Monetization System" as Monetization {
+        node "Ad Insertion Service" as AdService
+        node "Revenue Tracking Service" as RevenueService
+        node "Subscription Management" as SubscriptionService
+    }
+}
+
+' Data Storage
+rectangle "Storage Layer" {
+    node "Video Storage" as VideoStorage
+    node "Thumbnail Storage" as ThumbnailStorage
+}
+
+' Backup and Recovery
+rectangle "Backup and Recovery" {
+    node "Backup Service" as BackupService
+    node "Recovery Service" as RecoveryService
+    node "Backup Storage" as BackupStorage
+}
+
+' External Services
+rectangle "External Services" {
+    node "Ad Platform" as AdPlatform
+    node "Social Media APIs" as SocialAPIs
+}
+
+' Relationships
+U -> LB: Video Request / Interaction
+LB -> CDN: Request Cached Video / Assets
+CDN -> U: Serve Video / Assets
+
+U -> StaticServer: Request Static Content
+U -> SessionMgmt: Manage Session
+
+U -> UserAPI: User Authentication / Profile Management
+U -> ContentAPI: Video Upload / Like / Comment
+U -> NotificationAPI: Receive Notifications
+U -> SearchAPI: Search for Videos
+
+UserAPI -> UserDB: Read/Write User Data
+ContentAPI -> VideoDB: Read/Write Video Metadata
+ContentAPI -> CommentsDB: Read/Write Comments
+
+ContentAPI -> UploadService: Upload Video
+UploadService -> Transcoder: Transcode Video
+Transcoder -> VideoStorage: Store Transcoded Videos
+UploadService -> MetadataService: Extract Metadata
+MetadataService -> VideoDB: Store Metadata
+UploadService -> Thumbnail: Generate Thumbnails
+Thumbnail -> ThumbnailStorage: Store Thumbnails
+
+SearchAPI -> VideoDB: Query Video Metadata
+RE -> PersonalizationService: Fetch Personalized Recommendations
+RE -> TrendingService: Analyze Trending Videos
+RE -> CollabFiltering: Apply Collaborative Filtering
+
+Monetization -> AdService: Insert Ads
+Monetization -> RevenueService: Track Revenue
+Monetization -> SubscriptionService: Manage Subscriptions
+
+AdService -> AdPlatform: Serve Ads
+NotificationAPI -> SocialAPIs: Share Content
+
+' Backup and Recovery Relationships
+DB --> BackupService: Database Backup
+VideoStorage --> BackupService: Video Backup
+ThumbnailStorage --> BackupService: Thumbnail Backup
+
+BackupService -> BackupStorage: Store Backups
+RecoveryService -> BackupStorage: Retrieve Backups
+RecoveryService -> DB: Restore Database
+RecoveryService -> VideoStorage: Restore Videos
+RecoveryService -> ThumbnailStorage: Restore Thumbnails
+
+@enduml

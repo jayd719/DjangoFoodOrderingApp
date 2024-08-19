@@ -1,0 +1,99 @@
+@startuml youtube
+left to right direction
+
+skinparam rectangle {
+  BackgroundColor White
+  BorderColor Black
+  Shadowing false
+}
+
+' Users
+actor User as U
+
+' Load Balancer and CDN
+rectangle "Global Infrastructure" {
+    node "Load Balancer" as LB
+    node "Content Delivery Network (CDN)" as CDN
+}
+
+' Frontend Layer
+rectangle "Frontend Layer" {
+    node "Web Server" as WebServer
+    node "API Server" as APIServer
+}
+
+' Backend Layer
+rectangle "Backend Layer" {
+    node "Video Processing Pipeline" as VPP {
+        node "Transcoding Service" as Transcoder
+        node "Thumbnail Generator" as Thumbnail
+    }
+
+    node "Database Cluster" as DB {
+        node "User Database" as UserDB
+        node "Video Metadata Database" as VideoDB
+        node "Comments Database" as CommentsDB
+    }
+
+    node "Recommendation Engine" as RE
+    node "Monetization System" as Monetization
+}
+
+' Data Storage
+rectangle "Storage Layer" {
+    node "Video Storage" as VideoStorage
+    node "Thumbnail Storage" as ThumbnailStorage
+}
+
+' Backup and Recovery
+rectangle "Backup and Recovery" {
+    node "Backup Service" as BackupService
+    node "Recovery Service" as RecoveryService
+    node "Backup Storage" as BackupStorage
+}
+
+' External Services
+rectangle "External Services" {
+    node "Ad Platform" as AdPlatform
+    node "Social Media APIs" as SocialAPIs
+}
+
+' Relationships
+U -> LB: Video Request / Interaction
+LB -> CDN: Request Cached Video / Assets
+CDN -> U: Serve Video / Assets
+
+U -> WebServer: HTTP Request
+WebServer -> APIServer: API Calls
+
+APIServer -> DB: Read/Write Data
+APIServer -> VPP: Trigger Video Processing
+
+VPP -> Transcoder: Transcode Video
+VPP -> Thumbnail: Generate Thumbnails
+
+APIServer -> RE: Fetch Recommendations
+APIServer -> Monetization: Ad Requests / Revenue Data
+
+DB -> UserDB: User Authentication/Profiles
+DB -> VideoDB: Video Metadata/Tags
+DB -> CommentsDB: User Comments
+
+APIServer -> VideoStorage: Store/Retrieve Videos
+APIServer -> ThumbnailStorage: Store/Retrieve Thumbnails
+
+APIServer -> AdPlatform: Serve Ads
+APIServer -> SocialAPIs: Share Content
+
+' Backup and Recovery Relationships
+DB --> BackupService: Database Backup
+VideoStorage --> BackupService: Video Backup
+ThumbnailStorage --> BackupService: Thumbnail Backup
+
+BackupService -> BackupStorage: Store Backups
+RecoveryService -> BackupStorage: Retrieve Backups
+RecoveryService -> DB: Restore Database
+RecoveryService -> VideoStorage: Restore Videos
+RecoveryService -> ThumbnailStorage: Restore Thumbnails
+
+@enduml

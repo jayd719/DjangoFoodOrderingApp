@@ -73,6 +73,7 @@ Top Level Design:
 
 <img src="./out/DOCS/componetsTwo/comps.png">
 <img src ="./out/DOCS/system Architecture/SystemArch.png">
+<img src="./out/DOCS/systemDesign/s.png">
 
 ## Files
 - Commands:
