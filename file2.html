@@ -1,0 +1,1402 @@
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+  <p>
+    Sure! Below is a version of the document with added links to external
+    resources that can help even less experienced software engineers build a
+    robust product. The links include tutorials, official documentation, and
+    articles that provide deeper insights into each technology or best practice.
+  </p>
+  <hr />
+  <h3><strong>1. Overview</strong></h3>
+  <p>
+    Creating a microservices-based application involves breaking down the system
+    into smaller, independently deployable services. This approach enhances
+    scalability, maintainability, and agility. To guide you through this
+    process, we'll cover key components, technologies, and best practices. For
+    each component, additional resources are provided to help you get started,
+    even if you're new to the concepts.
+  </p>
+  <hr />
+  <h3><strong>2. Service Layer</strong></h3>
+  <h4><strong>A. API Gateway</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The API Gateway serves as the single entry point for all client requests,
+    routing them to the appropriate backend services.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Routing</strong>: Directs incoming requests to the appropriate
+      microservice.
+    </li>
+    <li>
+      <strong>Rate Limiting</strong>: Controls the number of requests a client
+      can make to prevent abuse.
+    </li>
+    <li>
+      <strong>Authentication</strong>: Validates client credentials before
+      forwarding requests.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Kong</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Kong Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Kong Gateway Tutorial</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=Fey2nYWOz1M"
+            >Kong for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>AWS API Gateway</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+            >AWS API Gateway</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started Guide</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://aws.amazon.com/api-gateway/getting-started/"
+            >Create Your First API</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=4Zno38NELeI"
+            >AWS API Gateway for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://aws.amazon.com/blogs/compute/best-practices-for-developing-and-operating-large-scale-apis-with-amazon-api-gateway/"
+        >API Gateway Best Practices</a
+      >
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=_0TE6WHRO4Y"
+        >Scaling Your API Gateway</a
+      >
+    </li>
+  </ul>
+  <h4><strong>B. Authentication and Authorization Service</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The Authentication and Authorization Service manages user login, role-based
+    access control (RBAC), and profile management.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Authentication</strong>: Securely validates user credentials,
+      potentially integrating with third-party providers (OAuth).
+    </li>
+    <li>
+      <strong>Authorization</strong>: Manages user roles and permissions to
+      control access to various parts of the application.
+    </li>
+    <li>
+      <strong>Profile Management</strong>: Allows users to update personal
+      details, preferences, and settings.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Spring Security (Java)</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/"
+            >Spring Security Documentation</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://spring.io/guides/gs/securing-web/"
+            >Securing a Web Application</a
+          >
+        </li>
+        <li>
+          <strong>Tutorial</strong>:
+          <a rel="noopener" target="_new">Spring Security Fundamentals</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Node.js with Passport.js</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Passport.js Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Simple Authentication</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=6FOq4cUdH8k"
+            >Node.js Authentication with Passport</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Firebase Authentication</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Firebase Authentication</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Firebase Authentication Quickstart</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=qqt7bK-TLM0"
+            >Firebase Authentication Tutorial</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Auth0</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Auth0 Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Quickstart Guide</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=RVAluVXMJzk"
+            >Auth0 Authentication</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">JWT Security Best Practices</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new"
+        >Role-Based Access Control with Spring Security</a
+      >
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=Pr-VQdeRV2k"
+        >Implementing OAuth2</a
+      >
+    </li>
+  </ul>
+  <h4><strong>C. Order Management Service</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The Order Management Service handles the creation, tracking, and management
+    of customer orders, including updates and cancellations.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Order Creation</strong>: Validates and processes new orders,
+      ensuring all items are available and pricing is correct.
+    </li>
+    <li>
+      <strong>Order Status Tracking</strong>: Provides real-time updates on
+      order status (e.g., confirmed, shipped, delivered).
+    </li>
+    <li>
+      <strong>Order History</strong>: Stores and retrieves historical order data
+      for user reference and analytics.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Event-Driven Architecture</strong>:</p>
+      <ul>
+        <li>
+          <strong>Resource</strong>:
+          <a rel="noopener" target="_new">Event-Driven Microservices</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=rPC9f4xpXcI"
+            >Building Event-Driven Systems</a
+          >
+        </li>
+        <li>
+          <strong>Example</strong>:
+          <a rel="noopener" target="_new"
+            >Implementing Event-Driven Architecture with Kafka</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Transactional Outbox Pattern</strong>:</p>
+      <ul>
+        <li>
+          <strong>Resource</strong>:
+          <a rel="noopener" target="_new">Transactional Outbox Pattern</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=95VL7os9hGk"
+            >Implementing Transactional Outbox</a
+          >
+        </li>
+        <li>
+          <strong>Example</strong>:
+          <a rel="noopener" target="_new"
+            >Spring Boot and Kafka Outbox Pattern</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Saga Pattern</strong>:</p>
+      <ul>
+        <li>
+          <strong>Resource</strong>:
+          <a rel="noopener" target="_new">Saga Pattern Explained</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=xDuwrtwYHu8"
+            >Saga Pattern in Microservices</a
+          >
+        </li>
+        <li>
+          <strong>Example</strong>:
+          <a rel="noopener" target="_new">Implementing Sagas</a>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Idempotency in Microservices</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Designing Idempotent Microservices</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=oxmTs_6RrPQ"
+        >Event-Driven Systems and Idempotency</a
+      >
+    </li>
+  </ul>
+  <h4><strong>D. Menu Management Service</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The Menu Management Service allows administrators to manage the items
+    offered for sale, including adding new items, updating existing ones, and
+    removing discontinued products.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>CRUD Operations</strong>: Provides APIs for creating, reading,
+      updating, and deleting menu items.
+    </li>
+    <li>
+      <strong>Category Management</strong>: Allows items to be grouped into
+      categories for easier navigation.
+    </li>
+    <li>
+      <strong>Versioning</strong>: Supports versioning of menu items to track
+      changes over time.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>GraphQL</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">GraphQL Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">GraphQL Basics</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+            >GraphQL Crash Course</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>RESTful API</strong>:</p>
+      <ul>
+        <li>
+          <strong>Resource</strong>:
+          <a rel="noopener" target="_new" href="https://restfulapi.net/"
+            >REST API Tutorial</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Designing Your First RESTful API</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=GMppyAPbLYk"
+            >RESTful APIs with Flask</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Headless CMS (e.g., Strapi, Contentful)</strong>:</p>
+      <ul>
+        <li>
+          <strong>Strapi Documentation</strong>:
+          <a rel="noopener" target="_new">Strapi Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started with Strapi</strong>:
+          <a rel="noopener" target="_new">Strapi Quickstart</a>
+        </li>
+        <li>
+          <strong>Contentful Documentation</strong>:
+          <a rel="noopener" target="_new">Contentful Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started with Contentful</strong>:
+          <a rel="noopener" target="_new">Contentful Guide</a>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">API Versioning Best Practices</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=t1J6Zoa7S94"
+        >API Versioning Strategies</a
+      >
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">SEO for Headless CMS</a>
+    </li>
+  </ul>
+  <h4><strong>E. Payment Service</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The Payment Service integrates with payment gateways to process payments
+    securely and reliably, handling various payment methods like credit cards,
+    PayPal, or digital wallets.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Payment Processing</strong>: Securely processes payments, ensuring
+      PCI compliance.
+    </li>
+    <li>
+      <strong>Refunds</strong>: Manages refunds for canceled or returned orders.
+    </li>
+    <li>
+      <strong>Transaction History</strong>: Keeps a record of all transactions
+      for auditing and customer reference.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Stripe</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new" href="https://stripe.com/docs/api"
+            >Stripe API Documentation</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://stripe.com/docs/payments/accept-a-payment"
+            >Accepting Payments with Stripe</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=GBcMF4jievA"
+            >Stripe API Tutorial</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>PayPal</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">PayPal Developer Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">PayPal API Basics</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=wfpLYhUN_7s"
+            >PayPal API Integration</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Square</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Square API Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Square Payments API</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=_T4dRWWVOa4"
+            >Square Payment API Guide</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Implementing Secure Payment Systems</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">PCI Compliance for Developers</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=3ZhH5_kGH9g"
+        >Understanding PCI Compliance</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <h3><strong>3. Data Layer</strong></h3>
+  <h4><strong>A. Database Layer</strong></h4>
+  <h5><strong>Function</strong>:</h5>
+  <p>
+    The database layer stores and retrieves persistent data required by the
+    various microservices, ensuring data integrity and availability.
+  </p>
+  <h5><strong>Key Features</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Data Modeling</strong>: Design schema based on business
+      requirements, optimizing for read/write operations.
+    </li>
+    <li>
+      <strong>Replication</strong>: Enables data redundancy and improves read
+      performance through replica databases.
+    </li>
+    <li>
+      <strong>Backup &amp; Recovery</strong>: Regularly backup data and
+      implement recovery procedures to protect against data loss.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Relational Database (e.g., MySQL, PostgreSQL)</strong>:</p>
+      <ul>
+        <li>
+          <strong>MySQL Documentation</strong>:
+          <a rel="noopener" target="_new" href="https://dev.mysql.com/doc/"
+            >MySQL Documentation</a
+          >
+        </li>
+        <li>
+          <strong>PostgreSQL Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.postgresql.org/docs/"
+            >PostgreSQL Documentation</a
+          >
+        </li>
+        <li>
+          <strong>MySQL Tutorial</strong>:
+          <a rel="noopener" target="_new">MySQL Basics</a>
+        </li>
+        <li>
+          <strong>PostgreSQL Tutorial</strong>:
+          <a rel="noopener" target="_new">PostgreSQL Beginner Tutorial</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=rj-_JkGCI1g"
+            >MySQL vs PostgreSQL</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>NoSQL Database (e.g., MongoDB, Cassandra)</strong>:</p>
+      <ul>
+        <li>
+          <strong>MongoDB Documentation</strong>:
+          <a rel="noopener" target="_new" href="https://docs.mongodb.com/"
+            >MongoDB Docs</a
+          >
+        </li>
+        <li>
+          <strong>Cassandra Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://cassandra.apache.org/doc/latest/"
+            >Cassandra Docs</a
+          >
+        </li>
+        <li>
+          <strong>MongoDB Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://university.mongodb.com/courses/M001/about"
+            >Getting Started with MongoDB</a
+          >
+        </li>
+        <li>
+          <strong>Cassandra Tutorial</strong>:
+          <a rel="noopener" target="_new">Cassandra Tutorial</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=v_hR4K4auoQ"
+            >NoSQL Databases Explained</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Distributed SQL (e.g., CockroachDB, YugabyteDB)</strong>:</p>
+      <ul>
+        <li>
+          <strong>CockroachDB Documentation</strong>:
+          <a rel="noopener" target="_new">CockroachDB Docs</a>
+        </li>
+        <li>
+          <strong>YugabyteDB Documentation</strong>:
+          <a rel="noopener" target="_new">YugabyteDB Docs</a>
+        </li>
+        <li>
+          <strong>CockroachDB Tutorial</strong>:
+          <a rel="noopener" target="_new">CockroachDB Tutorial</a>
+        </li>
+        <li>
+          <strong>YugabyteDB Tutorial</strong>:
+          <a rel="noopener" target="_new">Getting Started with YugabyteDB</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=kK3boHBdV_Q"
+            >Distributed SQL Explained</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new" href="https://use-the-index-luke.com/"
+        >Database Indexing Best Practices</a
+      >
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://docs.microsoft.com/en-us/azure/sql/database/sql-database-partitioning"
+        >Database Partitioning Guide</a
+      >
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=MAU7g6QW5bw"
+        >Database Indexing and Partitioning</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <h3><strong>4. Message Queues</strong></h3>
+  <h4><strong>Function</strong>:</h4>
+  <p>
+    Message queues decouple microservices by allowing them to communicate
+    asynchronously, improving system resilience and scalability.
+  </p>
+  <h4><strong>Key Features</strong>:</h4>
+  <ul>
+    <li>
+      <strong>Asynchronous Communication</strong>: Allows services to send
+      messages to a queue without waiting for an immediate response.
+    </li>
+    <li>
+      <strong>Durable Queues</strong>: Ensures that messages are not lost even
+      if a service crashes or the system restarts.
+    </li>
+    <li>
+      <strong>Message Retention</strong>: Configures how long messages are kept
+      in the queue before being discarded.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>RabbitMQ</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">RabbitMQ Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">RabbitMQ Tutorials</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=deG25y_r6OY"
+            >RabbitMQ Crash Course</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Apache Kafka</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://kafka.apache.org/documentation/"
+            >Kafka Documentation</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://kafka.apache.org/quickstart"
+            >Kafka Quickstart</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=8Z7ZKtHUNwU"
+            >Apache Kafka for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>AWS SQS</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html"
+            >AWS SQS Documentation</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-getting-started.html"
+            >Using Amazon SQS</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=JSRQUJ1KjcI"
+            >AWS SQS Crash Course</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Best Practices for Message Queues</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Kafka Best Practices</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=wGqihKNf96U"
+        >Message Queues and Idempotency</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <h3><strong>5. Monitoring and Logging</strong></h3>
+  <h4><strong>Function</strong>:</h4>
+  <p>
+    Monitoring and logging tools provide visibility into the system’s health,
+    performance, and behavior, helping to detect issues and maintain uptime.
+  </p>
+  <h4><strong>Key Features</strong>:</h4>
+  <ul>
+    <li>
+      <strong>Real-Time Monitoring</strong>: Continuously track key metrics like
+      CPU usage, memory usage, and response times.
+    </li>
+    <li>
+      <strong>Centralized Logging</strong>: Aggregate logs from all
+      microservices in one place for easier analysis.
+    </li>
+    <li>
+      <strong>Alerting</strong>: Automatically trigger alerts when predefined
+      thresholds are breached.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Prometheus + Grafana</strong>:</p>
+      <ul>
+        <li>
+          <strong>Prometheus Documentation</strong>:
+          <a rel="noopener" target="_new">Prometheus Docs</a>
+        </li>
+        <li>
+          <strong>Grafana Documentation</strong>:
+          <a rel="noopener" target="_new">Grafana Docs</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Prometheus and Grafana Tutorial</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=h0A2zwpyDbs"
+            >Prometheus &amp; Grafana Setup</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>ELK Stack (Elasticsearch, Logstash, Kibana)</strong>:</p>
+      <ul>
+        <li>
+          <strong>Elasticsearch Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.elastic.co/guide/index.html"
+            >Elasticsearch Docs</a
+          >
+        </li>
+        <li>
+          <strong>Logstash Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.elastic.co/guide/en/logstash/current/index.html"
+            >Logstash Docs</a
+          >
+        </li>
+        <li>
+          <strong>Kibana Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.elastic.co/guide/en/kibana/current/index.html"
+            >Kibana Docs</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">ELK Stack Tutorial</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=pHIN1n5H2D0"
+            >ELK Stack Crash Course</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Datadog</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Datadog Docs</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Monitoring with Datadog</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=n2Q_gEsJKCQ"
+            >Datadog APM Introduction</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>AWS CloudWatch</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html"
+            >AWS CloudWatch Docs</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingStarted.html"
+            >CloudWatch Quickstart</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=xrCBVXBdzJ4"
+            >AWS CloudWatch for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Effective Monitoring Strategies</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Logging Best Practices</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=lIoRxbFNgx8"
+        >Monitoring and Alerting for Microservices</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <h3><strong>6. Deployment</strong></h3>
+  <h4><strong>Function</strong>:</h4>
+  <p>
+    Deployment strategies determine how and when new versions of services are
+    released into production, with minimal disruption to the end users.
+  </p>
+  <h4><strong>Key Features</strong>:</h4>
+  <ul>
+    <li>
+      <strong>Continuous Integration/Continuous Deployment (CI/CD)</strong>:
+      Automates the build, testing, and deployment of services.
+    </li>
+    <li>
+      <strong>Canary Releases</strong>: Gradually roll out a new version to a
+      small percentage of users before full deployment.
+    </li>
+    <li>
+      <strong>Blue/Green Deployment</strong>: Deploy the new version alongside
+      the old one, then switch traffic once the new version is verified to be
+      stable.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>Jenkins</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Jenkins Docs</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Jenkins Quickstart Guide</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=zDZaP8lD2ac"
+            >Jenkins CI/CD Pipeline Tutorial</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>GitLab CI/CD</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new" href="https://docs.gitlab.com/ee/ci/"
+            >GitLab CI/CD Docs</a
+          >
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://docs.gitlab.com/ee/ci/pipelines/"
+            >GitLab CI/CD Pipeline</a
+          >
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=1xaVxJsk_HY"
+            >GitLab CI/CD for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>CircleCI</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">CircleCI Docs</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">CircleCI Quickstart</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=3XkXTgwTXBM"
+            >CircleCI Pipeline Setup</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Kubernetes</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">Kubernetes Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Kubernetes Basics</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=X48VuDVv0do"
+            >Kubernetes for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">CI/CD Best Practices</a>
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Canary Deployments with Kubernetes</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=hxgIhA3Tmi8"
+        >Deploying Microservices with Kubernetes</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <p>
+    By following these guidelines and utilizing the provided resources, even a
+    less experienced software engineer can begin to create a robust, scalable,
+    and maintainable microservices-based application.
+  </p>
+  <hr />
+  <h3><strong>7. Security</strong></h3>
+  <h4><strong>Function</strong>:</h4>
+  <p>
+    Implement security measures to protect the application and its users from
+    potential threats and vulnerabilities.
+  </p>
+  <h4><strong>Key Features</strong>:</h4>
+  <ul>
+    <li>
+      <strong>Data Encryption</strong>: Ensure data at rest and in transit is
+      encrypted to protect sensitive information.
+    </li>
+    <li>
+      <strong>Rate Limiting</strong>: Prevent abuse by limiting the number of
+      requests a client can make in a given timeframe.
+    </li>
+    <li>
+      <strong>Penetration Testing</strong>: Regularly test the system for
+      vulnerabilities and fix them before they can be exploited.
+    </li>
+  </ul>
+  <h5><strong>Technology Options</strong>:</h5>
+  <ol>
+    <li>
+      <p><strong>SSL/TLS</strong>:</p>
+      <ul>
+        <li>
+          <strong>Resource</strong>:
+          <a rel="noopener" target="_new">SSL/TLS Overview</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">How to Set Up SSL on Your Server</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=_Gz8XJRU1lE"
+            >Understanding SSL/TLS</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>OAuth2 and OpenID Connect</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">OAuth2 Documentation</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">Implementing OAuth2</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=996OiexHze0"
+            >OAuth2 Simplified</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>OWASP Top 10</strong>:</p>
+      <ul>
+        <li>
+          <strong>Official Documentation</strong>:
+          <a rel="noopener" target="_new">OWASP Top 10</a>
+        </li>
+        <li>
+          <strong>Getting Started</strong>:
+          <a rel="noopener" target="_new">OWASP Top 10 Explained</a>
+        </li>
+        <li>
+          <strong>Video Tutorial</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=b6C1HbQXzHg"
+            >OWASP Top 10 for Beginners</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>
+        <strong>Penetration Testing Tools (e.g., Metasploit, Burp Suite)</strong
+        >:
+      </p>
+      <ul>
+        <li>
+          <strong>Metasploit Documentation</strong>:
+          <a rel="noopener" target="_new">Metasploit Docs</a>
+        </li>
+        <li>
+          <strong>Burp Suite Documentation</strong>:
+          <a rel="noopener" target="_new">Burp Suite Docs</a>
+        </li>
+        <li>
+          <strong>Metasploit Tutorial</strong>:
+          <a rel="noopener" target="_new">Metasploit Basics</a>
+        </li>
+        <li>
+          <strong>Burp Suite Tutorial</strong>:
+          <a rel="noopener" target="_new">Getting Started with Burp Suite</a>
+        </li>
+        <li>
+          <strong>Video</strong>:
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.youtube.com/watch?v=PGd8ts9eFDw"
+            >Penetration Testing with Metasploit</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h5><strong>Best Practices</strong>:</h5>
+  <ul>
+    <li>
+      <strong>Resource</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final"
+        >Data Encryption Best Practices</a
+      >
+    </li>
+    <li>
+      <strong>Resource</strong>:
+      <a rel="noopener" target="_new">Securing Microservices</a>
+    </li>
+    <li>
+      <strong>Video</strong>:
+      <a
+        rel="noopener"
+        target="_new"
+        href="https://www.youtube.com/watch?v=5jX5XovA5RM"
+        >API Security Best Practices</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <p><strong>Additional Resources</strong>:</p>
+  <ul>
+    <li>
+      <strong>Books</strong>:
+      <ul>
+        <li>
+          <em>Designing Data-Intensive Applications</em> by Martin Kleppmann
+        </li>
+        <li><em>Building Microservices</em> by Sam Newman</li>
+        <li><em>Kubernetes Up &amp; Running</em> by Kelsey Hightower</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Courses</strong>:
+      <ul>
+        <li>
+          <a
+            rel="noopener"
+            target="_new"
+            href="https://www.coursera.org/specializations/microservices"
+            >Coursera: Microservices Specialization</a
+          >
+        </li>
+        <li>
+          <a rel="noopener" target="_new">Udemy: Kubernetes for Beginners</a>
+        </li>
+        <li>
+          <a rel="noopener" target="_new"
+            >Pluralsight: Developing Microservices with Java</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr />
+  <p>
+    I hope this enhanced document with external links will provide a
+    comprehensive guide for building a robust microservices application,
+    suitable for engineers with varying levels of experience.
+  </p>
+  <p>Let me know if you need further adjustments or more resources!</p>
+</div>
