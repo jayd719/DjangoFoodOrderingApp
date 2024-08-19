@@ -29,7 +29,7 @@ document.querySelectorAll("#srs").forEach((container) => {
     } else if (element.nodeName === "P") {
       element.className = "mx-auto text-justify mb-2 text-md";
     } else if (element.nodeName === "UL") {
-      element.className = "ml-8";
+      element.className = "pl-8";
     } else if (element.nodeName === "HR") {
       element.className = "mb-10 mt-6";
     } else if (element.nodeName === "IMG") {
