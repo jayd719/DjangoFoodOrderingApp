@@ -22,9 +22,6 @@ class MenuItem(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     calories = models.IntegerField()
     
-
-
-
     def __str__(self):
         return self.itemName
     
@@ -35,4 +32,8 @@ Description: {self.description}
 Price: {self.price}
 Calories: {self.price}
 '''+"-"*20
+    
+    
+    
+    
     

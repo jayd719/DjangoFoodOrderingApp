@@ -1,9 +1,10 @@
 from django.shortcuts import render,HttpResponse
+from django.views.generic.edit import FormView
 from T01Menu.models import MenuItem
 from T01Menu.models import Category
 from django.views import View
 from django.shortcuts import redirect
-
+from .forms import NameForm
 
 def redirect_(request):
     return redirect("/menu/")
@@ -29,3 +30,17 @@ class Menu(View):
                 data.update({category[1]:MenuItem.objects.filter(category=category[0])})
 
         return render(request,self.template_name,{"data":data})
+
+
+class NameFormView(FormView):
+    template_name="NameForm/index.html"
+    form_class = NameForm
+    success_url="/thanks/"
+    
+    def form_invalid(self, form):
+        print(form)
+        return super().form_invalid(form)
+    
+
+def success(requests):
+    return HttpResponse("form success")

@@ -1,0 +1,8 @@
+{%extends 'homepage.html'%} {%load static%} {%block content%}
+<script src="{%static 'common/updateHeader.js'%}"></script>
+<form action="/your_name/" method="post">
+  {%csrf_token%} {{form}}
+  <input class="submit" type="submit" value="Submit" />
+</form>
+<script src="{%static 'forms/nameForm.js'%}"></script>
+{%endblock%}
