@@ -59,7 +59,7 @@ let IconHeader = `
   <div class="flex items-center gap-2">
      <div class="w-6 md:w-10 invert">${ICON()}</div>
       <div class="text-white">
-          <p class="font-bold font-title">Skip The Line</p>
+          <p class="font-bold tracking-tighter text-lg">Skip The Line</p>
           <p class="text-[9.75px]">Order Online</p>
       </div>
   </div>
