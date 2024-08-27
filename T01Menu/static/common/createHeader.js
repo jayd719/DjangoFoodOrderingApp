@@ -35,7 +35,7 @@ HEADER.className = "fixed z-[400] w-full";
  */
 let topRow = document.createElement("div");
 HEADER.appendChild(topRow);
-topRow.className = "bg-cyan-800 p-1";
+topRow.className = "bg-red-700 p-1";
 
 let offerText = document.createElement("h1");
 offerText.className = "text-[12px] md:text-md text-center text-white";
@@ -51,18 +51,37 @@ setInterval(() => {
 }, 2000);
 
 /**
+ * Creates a container for the icon header, appends it to the body, and sets up its styling.
+ * The icon header contains an icon and associated text.
+ */
+let IconHeader = `
+<div class="px-5">
+  <div class="flex items-center gap-2">
+     <div class="w-6 md:w-10 invert">${ICON()}</div>
+      <div class="text-white">
+          <p class="font-bold font-title">Skip The Line</p>
+          <p class="text-[9.75px]">Order Online</p>
+      </div>
+  </div>
+</div>`;
+
+/**
  * Creates the menu bar with a cart button, appends it to the header, and sets up its styling.
  */
 let menuBar = document.createElement("div");
 HEADER.appendChild(menuBar);
 menuBar.innerHTML = `
-<div class="bg-[#305762] flex justify-end shadow-xl">
-  <ul class="menu menu-horizontal text-white font-bold gap-3 items-center text-md">
-    <li class="hidden md:flex"><a href="/srs/">Call Restaurant</a><li>
-    <li class="hidden md:flex">Menu<li>
-    <li class="hidden md:flex">Offers<li>
-    ${cartButton()}
-  <ul>
+<div class="bg-red-600">
+<div class="flex justify-between mx-auto items-center p-2">
+    ${IconHeader}
+    <ul class="flex text-white gap-2 items-center text-sm py-4 px-3 justify-center">
+      <li class="hidden md:flex hover:underline"><a href="/srs/">Call Restaurant</a><li>
+      <li class="hidden md:flex"><a href="/">Menu</a><li>
+      <li class="hidden md:flex"><a href="/">Deals</a><li>
+      <li class="hidden md:flex"><a href="/">About</a><li>
+      ${cartButton()}
+    <ul>
+  <div>
 </div>
 `;
 
@@ -73,23 +92,7 @@ let secondRow = document.createElement("div");
 document.body.appendChild(secondRow);
 secondRow.className = "h-20 bg-red-600";
 
-/**
- * Creates a container for the icon header, appends it to the body, and sets up its styling.
- * The icon header contains an icon and associated text.
- */
-let IconHeader = document.createElement("div");
-document.body.appendChild(IconHeader);
-IconHeader.className = "bg-[#305762] p-4";
-IconHeader.innerHTML = `
-<div class="container mx-auto">
-  <div class="flex items-center gap-2">
-     <div class="w-10 md:w-14 invert">${ICON()}</div>
-      <div class="text-white">
-          <p class="font-bold font-title">Skip The Line</p>
-          <p class="text-[10px]">Order Online</p>
-      </div>
-  </div>
-</div>`;
+
 
 /**
  * creates and add side bar for cart items
