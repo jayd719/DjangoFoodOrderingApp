@@ -2,7 +2,7 @@
 {%load static%} 
 {%block content%} 
 
-
+{% include 'includes/sectionOne.html'%}
 {% include 'includes/rightSideBar.html'%}
 {%include 'includes/categoriesMenu.html'%}
 
@@ -42,6 +42,6 @@
 
 {%endfor%}
 
-<script src="{%static 'updateHeadings.js'%}"></script>
-<script src="{%static 'cart.js'%}"></script>
+<script src="{%static 'common/updateHeadings.js'%}"></script>
+<script src="{%static 'cart/cart.js'%}"></script>
 {%endblock%}

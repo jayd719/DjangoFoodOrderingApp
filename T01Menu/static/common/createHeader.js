@@ -35,7 +35,7 @@ HEADER.className = "fixed z-[400] w-full";
  */
 let topRow = document.createElement("div");
 HEADER.appendChild(topRow);
-topRow.className = "bg-red-600 p-1";
+topRow.className = "bg-cyan-800 p-1";
 
 let offerText = document.createElement("h1");
 offerText.className = "text-[12px] md:text-md text-center text-white";
@@ -56,7 +56,7 @@ setInterval(() => {
 let menuBar = document.createElement("div");
 HEADER.appendChild(menuBar);
 menuBar.innerHTML = `
-<div class="bg-zinc-800 flex justify-end shadow-xl">
+<div class="bg-[#305762] flex justify-end shadow-xl">
   <ul class="menu menu-horizontal text-white font-bold gap-3 items-center text-md">
     <li class="hidden md:flex"><a href="/srs/">Call Restaurant</a><li>
     <li class="hidden md:flex">Menu<li>
@@ -79,7 +79,7 @@ secondRow.className = "h-20 bg-red-600";
  */
 let IconHeader = document.createElement("div");
 document.body.appendChild(IconHeader);
-IconHeader.className = "bg-zinc-800 p-4";
+IconHeader.className = "bg-[#305762] p-4";
 IconHeader.innerHTML = `
 <div class="container mx-auto">
   <div class="flex items-center gap-2">
