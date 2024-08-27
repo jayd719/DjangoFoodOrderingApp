@@ -75,7 +75,7 @@ menuBar.innerHTML = `
 <div class="flex justify-between mx-auto items-center p-2">
     ${IconHeader}
     <ul class="flex text-white gap-2 items-center text-sm py-4 px-3 justify-center">
-      <li class="hidden md:flex hover:underline"><a href="/srs/">Call Restaurant</a><li>
+      <li class="hidden md:flex hover:underline hover:scale-[1.2] duration-200 hover:text-yellow-500"><a href="/srs/">Call Restaurant</a><li>
       <li class="hidden md:flex"><a href="/">Menu</a><li>
       <li class="hidden md:flex"><a href="/">Deals</a><li>
       <li class="hidden md:flex"><a href="/">About</a><li>

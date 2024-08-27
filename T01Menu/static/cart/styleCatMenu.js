@@ -2,13 +2,9 @@ let menuContainer = document.getElementById("menuContainer");
 
 const ELEMENT = 1;
 
-let categoriesIcons = [];
 
-menuContainer.className = "flex justify-center";
-menuContainer.childNodes[ELEMENT].className =
-  "grid justify-items-stretch grid-cols-3  lg:grid-cols-6 gap-1 px-10 py-10";
-
-menuContainer.childNodes[ELEMENT].childNodes.forEach((item) => {
+menuContainer.className = "mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12";
+menuContainer.childNodes.forEach((item) => {
   if (item.nodeName == "LI") {
     item.className =
       "flex items-center justify-center  text-xl flex-col group hover:text-red-600 p-4 hover:font-bold hover:cursor-pointer";
